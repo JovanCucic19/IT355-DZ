@@ -1,2 +1,5 @@
-com\mycompany\route\data\Student.class
+com\mycompany\dao\impl\ArtiklDaoImpl.class
+com\mycompany\aspect\InterceptorLog.class
+com\mycompany\dao\ArtiklDao.class
+com\mycompany\route\data\Artikl.class
 com\mycompany\route\MainController.class

@@ -36,7 +36,7 @@
                             <a href="#">About</a>
                         </li>
                         <li>
-                            <a href="#">Dodaj</a>
+                            <a href="/WeShop/artikl">Dodaj</a>
                         </li>
                         <li>
                             <a href="#">Contact</a>
