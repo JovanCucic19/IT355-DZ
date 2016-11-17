@@ -41,6 +41,9 @@
                         <li>
                             <a href="#">Contact</a>
                         </li>
+                        <li>
+                            <a href="/WeShop/login">Login</a>
+                        </li>
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
