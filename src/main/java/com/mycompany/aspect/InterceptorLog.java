@@ -4,10 +4,7 @@ import java.lang.reflect.Method;
 import org.aspectj.lang.annotation.Aspect;
 import org.springframework.aop.MethodBeforeAdvice;
 
-/**
- *
- * @author Jovan
- */
+
 @Aspect
 public class InterceptorLog implements MethodBeforeAdvice {
 

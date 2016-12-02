@@ -1,9 +1,3 @@
-<%-- 
-    Document   : dodavanjeArtikla
-    Created on : Oct 25, 2016, 12:59:08 PM
-    Author     : Jovan
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>

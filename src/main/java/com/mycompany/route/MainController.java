@@ -1,7 +1,7 @@
 package com.mycompany.route;
 
 import com.mycompany.dao.ArtiklDao;
-import com.mycompany.route.data.Artikl;
+import com.mycompany.data.Artikl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AnonymousAuthenticationToken;
 import org.springframework.security.core.Authentication;
