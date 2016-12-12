@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+=======
+>>>>>>> 447daabd40c1a0cc3d06792d7136f17d26adb0f3
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>

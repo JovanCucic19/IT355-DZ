@@ -2,15 +2,12 @@ package com.mycompany.route;
 
 import com.mycompany.dao.ArtiklDao;
 import com.mycompany.model.Artikl;
-import com.mycompany.model.ButtonInfo;
 import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.util.List;
 import javax.servlet.ServletContext;
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
-import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AnonymousAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -20,7 +17,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.ui.ModelMap;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -63,6 +59,8 @@ public class MainController {
             stream.write(bytes);
             stream.flush();
         }
+        
+        
 
         System.out.println("Bajtovi iz kontrolera: " + bytes);
         p.setKnjiga_slika("/WeShop/img/" + filename);
@@ -135,6 +133,8 @@ public class MainController {
     public ModelAndView delete(@PathVariable int knjiga_id, ModelAndView model) {
         artiklDao.delete(knjiga_id);
         return new ModelAndView("redirect:/");
+        
+        
     }
 
 }

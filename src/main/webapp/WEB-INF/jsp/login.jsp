@@ -1,9 +1,3 @@
-<%-- 
-    Document   : login
-    Created on : Nov 9, 2016, 9:58:35 AM
-    Author     : ajlos
---%>
-
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@page session="true"%>
 <html>

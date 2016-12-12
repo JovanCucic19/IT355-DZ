@@ -1,9 +1,3 @@
-<%-- 
-    Document   : 403
-    Created on : Nov 9, 2016, 9:56:16 AM
-    Author     : ajlos
---%>
-
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html>
     <body>
