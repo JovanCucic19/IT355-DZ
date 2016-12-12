@@ -1,8 +1,8 @@
-<web-app id="WebApp_ID" version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" 
+<web-app id="WebApp_ID" version="2.4" 
+         xmlns="http://java.sun.com/xml/ns/j2ee" 
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-         xsi:schemaLocation="
-http://java.sun.com/xml/ns/j2ee 
-http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
+                             http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
     <display-name>Spring MVC Application</display-name>
     <servlet> 
         <servlet-name>WeShop</servlet-name> 
@@ -21,6 +21,12 @@ http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
         <param-value>
             /WEB-INF/spring-security.xml,
             /WEB-INF/spring-database.xml
+        </param-value>
+    </context-param>
+    <context-param>
+        <param-name>upload.location</param-name>
+        <param-value>
+            C:\Users\Jovan\Documents\IT355-DZ\src\main\webapp\WEB-INF\img
         </param-value>
     </context-param>
     <!-- Spring Security -->

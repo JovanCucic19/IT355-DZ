@@ -1,5 +1,8 @@
-C:\Users\Jovan\Documents\IT\IT355-DZ\src\main\java\com\mycompany\route\MainController.java
-C:\Users\Jovan\Documents\IT\IT355-DZ\src\main\java\com\mycompany\aspect\InterceptorLog.java
-C:\Users\Jovan\Documents\IT\IT355-DZ\src\main\java\com\company\data\Artikl.java
-C:\Users\Jovan\Documents\IT\IT355-DZ\src\main\java\com\mycompany\dao\ArtiklDao.java
-C:\Users\Jovan\Documents\IT\IT355-DZ\src\main\java\com\mycompany\dao\impl\ArtiklDaoImpl.java
+C:\Users\Jovan\Documents\IT355-DZ\src\main\java\com\mycompany\dao\ArtiklDao.java
+C:\Users\Jovan\Documents\IT355-DZ\src\main\java\com\mycompany\model\FileUpload.java
+C:\Users\Jovan\Documents\IT355-DZ\src\main\java\com\mycompany\route\MainController.java
+C:\Users\Jovan\Documents\IT355-DZ\src\main\java\com\mycompany\model\ButtonInfo.java
+C:\Users\Jovan\Documents\IT355-DZ\src\main\java\com\mycompany\mapper\ArtiklMapper.java
+C:\Users\Jovan\Documents\IT355-DZ\src\main\java\com\mycompany\model\Artikl.java
+C:\Users\Jovan\Documents\IT355-DZ\src\main\java\com\mycompany\dao\impl\ArtiklDaoImpl.java
+C:\Users\Jovan\Documents\IT355-DZ\src\main\java\com\mycompany\aspect\InterceptorLog.java

@@ -1,0 +1,8 @@
+com\mycompany\dao\ArtiklDao.class
+com\mycompany\route\MainController.class
+com\mycompany\model\Artikl.class
+com\mycompany\dao\impl\ArtiklDaoImpl.class
+com\mycompany\model\ButtonInfo.class
+com\mycompany\aspect\InterceptorLog.class
+com\mycompany\mapper\ArtiklMapper.class
+com\mycompany\model\FileUpload.class

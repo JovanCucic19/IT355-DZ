@@ -39,7 +39,7 @@
                             <a href="/WeShop/artikl">Dodaj</a>
                         </li>
                         <li>
-                            <a href="#">Contact</a>
+                            <a href="/WeShop/dodavanjeArtikla">Prikaz</a>
                         </li>
                         <li>
                             <a href="/WeShop/login">Login</a>
