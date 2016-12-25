@@ -1,17 +1,8 @@
-C:\Users\Jovan\Documents\IT355-DZ\src\main\java\com\mycompany\dao\ArtiklDao.java
-<<<<<<< HEAD
-C:\Users\Jovan\Documents\IT355-DZ\src\main\java\com\mycompany\model\FileUpload.java
-C:\Users\Jovan\Documents\IT355-DZ\src\main\java\com\mycompany\route\MainController.java
-C:\Users\Jovan\Documents\IT355-DZ\src\main\java\com\mycompany\model\ButtonInfo.java
-C:\Users\Jovan\Documents\IT355-DZ\src\main\java\com\mycompany\mapper\ArtiklMapper.java
-C:\Users\Jovan\Documents\IT355-DZ\src\main\java\com\mycompany\model\Artikl.java
-C:\Users\Jovan\Documents\IT355-DZ\src\main\java\com\mycompany\dao\impl\ArtiklDaoImpl.java
-C:\Users\Jovan\Documents\IT355-DZ\src\main\java\com\mycompany\aspect\InterceptorLog.java
-=======
-C:\Users\Jovan\Documents\IT355-DZ\src\main\java\com\mycompany\webflow\LoginBean.java
-C:\Users\Jovan\Documents\IT355-DZ\src\main\java\com\mycompany\route\MainController.java
-C:\Users\Jovan\Documents\IT355-DZ\src\main\java\com\mycompany\dao\impl\ArtiklDaoImpl.java
-C:\Users\Jovan\Documents\IT355-DZ\src\main\java\com\mycompany\aspect\InterceptorLog.java
-C:\Users\Jovan\Documents\IT355-DZ\src\main\java\com\mycompany\data\Artikl.java
-C:\Users\Jovan\Documents\IT355-DZ\src\main\java\com\mycompany\webflow\LoginService.java
->>>>>>> 447daabd40c1a0cc3d06792d7136f17d26adb0f3
+C:\Users\Jovan\Documents\NetBeansProjects\IT355-DZ\src\main\java\com\mycompany\model\Artikl.java
+C:\Users\Jovan\Documents\NetBeansProjects\IT355-DZ\src\main\java\com\mycompany\webflow\LoginService.java
+C:\Users\Jovan\Documents\NetBeansProjects\IT355-DZ\src\main\java\com\mycompany\dao\impl\ArtiklDaoImpl.java
+C:\Users\Jovan\Documents\NetBeansProjects\IT355-DZ\src\main\java\com\mycompany\dao\ArtiklDao.java
+C:\Users\Jovan\Documents\NetBeansProjects\IT355-DZ\src\main\java\com\mycompany\aspect\InterceptorLog.java
+C:\Users\Jovan\Documents\NetBeansProjects\IT355-DZ\src\main\java\com\mycompany\webflow\LoginBean.java
+C:\Users\Jovan\Documents\NetBeansProjects\IT355-DZ\src\main\java\com\mycompany\route\MainController.java
+C:\Users\Jovan\Documents\NetBeansProjects\IT355-DZ\src\main\java\com\mycompany\mapper\ArtiklMapper.java

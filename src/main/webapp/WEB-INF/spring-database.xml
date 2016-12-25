@@ -10,7 +10,7 @@
         <property name="username" value="root" />
         <property name="password" value="" />
     </bean>
-    <bean name="artiklDao"
+    <bean name="artiklDaoSatro"
           class="com.mycompany.dao.impl.ArtiklDaoImpl">
         <property name="dataSource" ref="dataSource" />
     </bean>

@@ -16,13 +16,13 @@ public interface ArtiklDao {
 
     public List<Artikl> getAllArtikls();
 
-    public boolean addArtiklic(Artikl artikl);
+    public Artikl addArtiklic(Artikl artikl);
     
     public boolean updateArtikl(Artikl artikl);
     
     public Artikl getArtiklById(int id);
     
-    public int delete(int id);
+    public void delete(Artikl artikl);
     
 
 }

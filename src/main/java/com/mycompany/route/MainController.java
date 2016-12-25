@@ -27,7 +27,7 @@ import org.springframework.web.servlet.ModelAndView;
 public class MainController {
 
     @Autowired
-    private ArtiklDao artiklDao;
+    ArtiklDao artiklDao;
 
     @RequestMapping(method = RequestMethod.GET, path = "/")
     public ModelAndView printHello(ModelAndView modelAndView) {
@@ -60,8 +60,6 @@ public class MainController {
             stream.flush();
         }
         
-        
-
         System.out.println("Bajtovi iz kontrolera: " + bytes);
         p.setKnjiga_slika("/WeShop/img/" + filename);
         model.addObject("object", p);
@@ -131,10 +129,9 @@ public class MainController {
 
     @RequestMapping(value = "/deleteartikl/{knjiga_id}", method = RequestMethod.GET)
     public ModelAndView delete(@PathVariable int knjiga_id, ModelAndView model) {
-        artiklDao.delete(knjiga_id);
+        Artikl artikl = artiklDao.getArtiklById(knjiga_id);
+        artiklDao.delete(artikl);
         return new ModelAndView("redirect:/");
-        
-        
     }
 
 }

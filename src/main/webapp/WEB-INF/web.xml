@@ -26,7 +26,7 @@
     <context-param>
         <param-name>upload.location</param-name>
         <param-value>
-            C:\Users\Jovan\Documents\IT355-DZ\src\main\webapp\WEB-INF\img
+            C:\Users\Jovan\Documents\NetBeansProjects\IT355-DZ\src\main\webapp\WEB-INF\img
         </param-value>
     </context-param>
     <!-- Spring Security -->

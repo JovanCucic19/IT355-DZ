@@ -1,13 +1,8 @@
+com\mycompany\webflow\LoginService.class
 com\mycompany\dao\ArtiklDao.class
 com\mycompany\route\MainController.class
-<<<<<<< HEAD
 com\mycompany\model\Artikl.class
 com\mycompany\dao\impl\ArtiklDaoImpl.class
-com\mycompany\model\ButtonInfo.class
 com\mycompany\aspect\InterceptorLog.class
 com\mycompany\mapper\ArtiklMapper.class
-com\mycompany\model\FileUpload.class
-=======
-com\mycompany\dao\impl\ArtiklDaoImpl.class
-com\mycompany\aspect\InterceptorLog.class
->>>>>>> 447daabd40c1a0cc3d06792d7136f17d26adb0f3
+com\mycompany\webflow\LoginBean.class

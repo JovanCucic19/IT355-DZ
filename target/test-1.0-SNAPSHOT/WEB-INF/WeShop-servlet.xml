@@ -4,11 +4,55 @@
        xmlns:mvc="http://www.springframework.org/schema/mvc"
        xmlns:tx="http://www.springframework.org/schema/tx"
        xmlns:context="http://www.springframework.org/schema/context"
-       xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd
-                           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.1.xsd     
-                           http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
-                           http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
-    <context:component-scan base-package="com.mycompany.*" />
+       xsi:schemaLocation="http://www.springframework.org/schema/mvc 
+                           http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
+                           http://www.springframework.org/schema/tx 
+                           http://www.springframework.org/schema/tx/spring-tx.xsd     
+                           http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+                           http://www.springframework.org/schema/context 
+                           http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+    
+<!--  
+    Izbrisano jer se ne igra lepo sa Hibernateom stvara "Error creating bean with name" gresku
+  <context:component-scan base-package="com.mycompany.*" />
+-->
+    
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+        <property name="configLocation" >
+            <!--Dodavanje path-a na kome se nalaze podešavanja za Hibernate -->
+            <value>classpath:hibernate.cfg.xml</value>
+        </property>
+        <!-- Dodavanje path-a paketa u kome se nalaze entity fajlovi na osnovu kojih
+        će Hibernate kreirati bazu i upisivati u nju-->
+        <property name="packagesToScan">
+            <list>
+                <value>com.mycompany.model</value>
+            </list>
+        </property>
+    </bean>
+
+    <!--Transakcija se dešava između baze i programa korišćenjem Transaction Managera koji definišemo ovde
+    On koristi sesiju koju smo definisali iznad    -->
+    <tx:annotation-driven transaction-manager="transactionManager"/>
+     
+    <bean id="transactionManager"  class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactory" />
+    </bean>
+ 
+    <bean id="artiklDao" class="com.mycompany.dao.impl.ArtiklDaoImpl"></bean>
+    <bean id="persistenceExceptionTranslationPostProcessor"
+          class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor"/>
+
+    <context:component-scan base-package="com.mycompany" />
+<!--   
+    Converzija iz artikla u integer zato je zakomentatisano PAZI
+    <mvc:annotation-driven conversion-service="conversionService" />
+-->
+    <tx:annotation-driven />
+
+    <mvc:default-servlet-handler />
+    
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"> 
         <property name="prefix" value="/WEB-INF/jsp/" /> 
         <property name="suffix" value=".jsp" /> 
@@ -16,7 +60,7 @@
     <mvc:resources mapping="/resources/**" location="/resources/" />
     <mvc:resources mapping="/img/**" location="/WEB-INF/img/" />
     <mvc:annotation-driven />
-        
+   
     <bean id="messageSource"
           class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
         <property name="basenames">
@@ -27,6 +71,8 @@
         </property>
         <property name="defaultEncoding" value="UTF-8"/>
     </bean>
+    <bean id="multipartResolver"
+          class="org.springframework.web.multipart.commons.CommonsMultipartResolver" />
     
     <bean id="logAspect" class="com.mycompany.aspect.InterceptorLog" />
     
@@ -46,20 +92,4 @@
             </list>
         </property>
     </bean>
-    
-<!--<<<<<<< HEAD
-    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"/>  
-=======
-    <bean class="org.springframework.webflow.mvc.servlet.FlowHandlerMapping">
-        <property name="flowRegistry" ref="bookSearchFlowRegistry" />
-    </bean>
-    <bean class="org.springframework.webflow.mvc.servlet.FlowHandlerAdapter">
-        <property name="flowExecutor" ref="bookSearchFlowExecutor" />
-    </bean>
-    <flow:flow-executor id="bookSearchFlowExecutor" flow-registry="bookSearchFlowRegistry" />
-    <flow:flow-registry id="bookSearchFlowRegistry">
-        <flow:flow-location id="bookSearchFlow" path="WEB-INF/book-search-flow.xml" />
-    </flow:flow-registry>
->>>>>>> 447daabd40c1a0cc3d06792d7136f17d26adb0f3-->
-    
 </beans>
