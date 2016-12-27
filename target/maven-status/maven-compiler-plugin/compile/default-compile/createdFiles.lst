@@ -5,4 +5,5 @@ com\mycompany\model\Artikl.class
 com\mycompany\dao\impl\ArtiklDaoImpl.class
 com\mycompany\aspect\InterceptorLog.class
 com\mycompany\mapper\ArtiklMapper.class
+com\mycompany\route\WeShopRestController.class
 com\mycompany\webflow\LoginBean.class
