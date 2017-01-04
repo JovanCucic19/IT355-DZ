@@ -30,6 +30,17 @@ public class Artikl implements Serializable {
     @Column(name = "knjiga_slika")
     private String knjiga_slika;
 
+    public Artikl() {
+    }
+
+    public Artikl(int knjiga_id, String knjiga_naziv, int knjiga_cena, String knjiga_opis, String knjiga_slika) {
+        this.knjiga_id = knjiga_id;
+        this.knjiga_naziv = knjiga_naziv;
+        this.knjiga_cena = knjiga_cena;
+        this.knjiga_opis = knjiga_opis;
+        this.knjiga_slika = knjiga_slika;
+    }
+    
     public int getKnjiga_id() {
         return knjiga_id;
     }
