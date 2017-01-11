@@ -1,8 +1,10 @@
 package com.mycompany.dao.impl;
 
 import com.mycompany.dao.ArtiklDao;
+import com.mycompany.messaging.MessageSender;
 import com.mycompany.model.Artikl;
-import com.mycompany.mapper.ArtiklMapper;
+import com.mycompany.model.InventoryResponse;
+import com.mycompany.model.OrderStatus;
 import java.util.List;
 import javax.sql.DataSource;
 import org.apache.commons.logging.Log;
@@ -11,6 +13,8 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.criterion.Restrictions;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.transaction.annotation.Transactional;
@@ -21,6 +25,9 @@ import org.springframework.stereotype.Service;
 @Repository("artiklDao")
 @Service
 public class ArtiklDaoImpl implements ArtiklDao {
+    
+    @Autowired
+    MessageSender messageSender;
 
     private JdbcTemplate jdbcTemplate;
     @SuppressWarnings("unused")
@@ -92,6 +99,7 @@ public class ArtiklDaoImpl implements ArtiklDao {
 //                + "(knjiga_id, knjiga_naziv, knjiga_cena, knjiga_opis, knjiga_slika) VALUES (?, ?, ?, ?, ?)";
 //        jdbcTemplate.update(sql, new Object[]{artikl.getKnjiga_id(), artikl.getKnjiga_naziv(), artikl.getKnjiga_cena(), artikl.getKnjiga_opis(), artikl.getKnjiga_slika()});
 //        return true;
+        messageSender.sendMessage(artikl);
         return (Artikl) getSession().merge(artikl);
 
     }
@@ -127,4 +135,18 @@ public class ArtiklDaoImpl implements ArtiklDao {
         getSession().delete(artikl);
 
     }
+
+    @Override
+    public void updateArtiklResponse(InventoryResponse response) {
+//        Artikl artikl = artiklDao.getArtiklById(response.getArtiklId());
+//        if (response.getReturnCode() == 200) {
+//            artikl.setStatus(OrderStatus.CONFIRMED);
+//        } else if (response.getReturnCode() == 300) {
+//            artikl.setStatus(OrderStatus.FAILED);
+//        } else {
+//            artikl.setStatus(OrderStatus.PENDING);
+//        }
+    }
+
+  
 }

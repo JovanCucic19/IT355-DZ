@@ -29,6 +29,16 @@ public class Artikl implements Serializable {
     
     @Column(name = "knjiga_slika")
     private String knjiga_slika;
+    
+    private OrderStatus status;
+
+    public OrderStatus getStatus() {
+        return status;
+    }
+
+    public void setStatus(OrderStatus status) {
+        this.status = status;
+    }
 
     public Artikl() {
     }
